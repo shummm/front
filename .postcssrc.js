@@ -3,7 +3,7 @@ module. exports = {
   "plugins": {
     "autoprefixer": {},
 
-//    "stylelint": {},
+    "stylelint": {},
 
     "postcss-safe-parser": {},
 

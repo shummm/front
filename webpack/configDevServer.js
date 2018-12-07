@@ -117,6 +117,21 @@ module. exports = () => {
         },
 
         {
+          "test": /\.scss$/,
+          "exclude": /node_modules/,
+          "use": [
+            "vue-style-loader",
+            "css-loader",
+            {
+              "loader": "sass-loader",
+              "options": {
+                "data": `@import "assets/scss/main.scss";`
+              }
+            }
+          ]
+        },
+
+        {
           "test": /\.css$/,
           "use": [
             "vue-style-loader",
