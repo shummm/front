@@ -85,6 +85,7 @@
     "svg-sprite-loader": "^3.8.0",
     "template-html-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.1.2",
     "vue-loader": "^15.2.4",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",

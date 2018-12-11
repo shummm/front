@@ -107,6 +107,9 @@ module. exports = () => {
         {
           "test": /\.js$/,
           "loader": "babel-loader",
+          "query": {
+            "presets": ['es2015']
+          },
           "exclude": /node_modules/,
         },
 
@@ -144,6 +147,16 @@ module. exports = () => {
           "exclude": /node_modules/,
         },
 
+        {
+          "test": /\.(jpg|jpeg|gif|png)$/,
+          "exclude": /node_modules/,
+          "loader":'url-loader?limit=1024&name=images/[name].[ext]'
+      },
+      {
+          "test": /\.(woff|woff2|eot|ttf|svg)$/,
+          "exclude": /node_modules/,
+          "loader": 'url-loader?limit=1024&name=fonts/[name].[ext]'
+      },
 
         {
           "test": /\.(png|jpg|gif)$/,

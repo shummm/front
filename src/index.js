@@ -1,11 +1,16 @@
-const Vue = require ("vue");
+import Vue from "vue";
+import VueRouter from "vue-router";
+import index from "./index.vue";
+import routes from "./routes";
+
+
+// const Vue = require ("vue");
 const Vuex = require ("vuex");
-const VueRouter = require ("vue-router");
+// const VueRouter = require ("vue-router");
 const VueResource = require ("vue-resource");
 
 
-const index = require ("./index.vue"). default;
-const configRouter = require ("./configRouter.js");
+// const index = require ("./index.vue"). default;
 
 
 Vue. config. debug = true;
@@ -16,12 +21,14 @@ Vue. use (VueRouter);
 Vue. use (Vuex);
 Vue. use (VueResource);
 
+const router = new VueRouter ({
+  routes,
+  // mode: 'history'
+});
 
-const router = new VueRouter (configRouter ());
 
-
-(new Vue ({
-  "el": ".page",
-  "router": router,
+new Vue ({
+  "el": "#app",
+  router,
   "render": h => h (index),
-}));
+});

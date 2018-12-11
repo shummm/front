@@ -1,0 +1,30 @@
+mixin category-icon
+    -
+        var categoryList = [
+            {title: "Property", src: "property", menu: ["Квартиры", "Дома", "Земля"]},
+            {title: "Transport", src: "transport", menu: ["Легковые", "Грузовые", "Мотоциклы"]},
+            {title: "Jobs", src: "jobs", menu: []},
+            {title: "Business", src: "business", menu: []},
+            {title: "Services", src: "services", menu: []},
+            {title: "Electronics", src: "electronics", menu: []},
+            {title: "DIY & Tools", src: "tools", menu: ["Клеи и герметики","Шкафы и оборудование для шкафов для шкафов для шкафов"]},
+            {title: "Animals", src: "animals", menu: []},
+            {title: "Home & Garden", src: "home", menu: []},
+            {title: "Fashion & Style", src: "fashion", menu: []},
+            {title: "Child's world", src: "childs", menu: []},
+            {title: "Antiques and collectables", src: "antiques", menu: []},
+            {title: "Sport and active leisure", src: "sport", menu: []},
+            {title: "Handmade Products", src: "handmade", menu: []},
+            {title: "Courses and education", src: "courses", menu: []},
+            {title: "Things to do", src: "things", menu: []},
+            {title: "Community", src: "community", menu: []},
+            {title: "Freebies", src: "freebies", menu: []},
+        ];
+
+    for item in categoryList
+        li(class = "category__item list__item")
+             a(class="list__item-link" href="#")
+                <svg class="list__item-svg">
+                    <use xlink:href="img/partition/sprite.svg##{item.src}" ></use>
+                </svg>
+                        
